@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hsuan0223x&#39;s Blog</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Hsuan0223x&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <copyright>© 2024 hsuan0223x</copyright>
+    <lastBuildDate>Sat, 13 Jul 2024 18:12:18 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AIS3 Pre-Exam&amp;MyfirstCTF 2024 Write-up</title>
+      <link>http://localhost:1313/posts/ais3-pre-exam-2024/</link>
+      <pubDate>Sat, 13 Jul 2024 18:12:18 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/ais3-pre-exam-2024/</guid>
+      <description>Misc #Welcome #給新手一個見面禮</description>
+      
+    </item>
+    
+    <item>
+      <title>hugo筆記</title>
+      <link>http://localhost:1313/posts/my-first-post/</link>
+      <pubDate>Sat, 13 Jul 2024 18:00:37 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/my-first-post/</guid>
+      <description>其實只是測試貼文，筆記只是順便</description>
+      
+    </item>
+    
+    <item>
+      <title>Who am I?</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Fri, 12 Jul 2024 20:15:33 +0800</pubDate>
+      
+      <guid>http://localhost:1313/about/</guid>
+      <description>嗨，我是hsuan0223x(h大小寫都可)，你可以叫我鯊鯊</description>
+      
+    </item>
+    
+  </channel>
+</rss>
