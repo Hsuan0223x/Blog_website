@@ -5,19 +5,19 @@ title = "Hsuan0223x's Blog"
 
 [params]
   displayName = "zh-tw"
-  isoCode = "en"
+  isoCode = "zh-tw"
   rtl = false
   dateFormat = "2 January 2006"
-  # logo = "img/logo.png"
-  # secondaryLogo = "img/secondary-logo.png"
-  # description = "My awesome website"
+  logo = "sakura_icon.png"
+  # secondaryLogo = "hacker_icon1.png"
+  # description = "hsuan0223x"
   # copyright = "Copy, _right?_ :thinking_face:"
 
  [author]
   name = "hsuan0223x"
    image = "Person_photo.jpg"
    headline = "一個路人。"
-   bio = "A little bit about you"
+  # bio = "A little bit about you"
    links = [
      { email = "mailto:hsuan0223x@gmail.com" },
      { github = "https://github.com/hsuan0223x" },
