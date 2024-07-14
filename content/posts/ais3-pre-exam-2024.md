@@ -2,6 +2,7 @@
 title = 'AIS3 Pre-Exam&MyfirstCTF 2024 Write-up'
 date = 2024-07-13T18:12:18+08:00
 draft = false
+tags = ["CTF","Cyber Security","Write-up"]
 +++
 ## Misc
 ### Welcome
