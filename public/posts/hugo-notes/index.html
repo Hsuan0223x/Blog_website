@@ -8,8 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>hugo筆記 &middot; Hsuan0223x&#39;s Blog</title>
-  <meta name="title" content="hugo筆記 &middot; Hsuan0223x&#39;s Blog" />
+  <title>hugo框架 &#43; GitHub Actions &#43; Cloudflare Pages &middot; Hsuan0223x&#39;s Blog</title>
+  <meta name="title" content="hugo框架 &#43; GitHub Actions &#43; Cloudflare Pages &middot; Hsuan0223x&#39;s Blog" />
   
   
   <meta name="keywords" content="hugo, website, notes, " />
@@ -62,7 +62,7 @@
   
   <meta property="og:url" content="http://localhost:1313/posts/hugo-notes/">
   <meta property="og:site_name" content="Hsuan0223x&#39;s Blog">
-  <meta property="og:title" content="hugo筆記">
+  <meta property="og:title" content="hugo框架 &#43; GitHub Actions &#43; Cloudflare Pages">
   <meta property="og:locale" content="zh_tw">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -74,7 +74,7 @@
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="hugo筆記">
+  <meta name="twitter:title" content="hugo框架 &#43; GitHub Actions &#43; Cloudflare Pages">
 
   
   <script type="application/ld+json">
@@ -82,8 +82,8 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "hugo筆記",
-    "headline": "hugo筆記",
+    "name": "hugo框架 \u002b GitHub Actions \u002b Cloudflare Pages",
+    "headline": "hugo框架 \u002b GitHub Actions \u002b Cloudflare Pages",
     
     
     "inLanguage": "zh-tw",
@@ -101,7 +101,7 @@
     "keywords": ["hugo","website","notes"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "132"
+    "wordCount": "313"
   }]
   </script>
 
@@ -454,7 +454,7 @@
   <header id="single_header" class="mt-5 max-w-prose">
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      hugo筆記
+      hugo框架 + GitHub Actions + Cloudflare Pages
     </h1>
     <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
@@ -497,7 +497,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <span>132 字</span><span class="px-2 text-primary-500">&middot;</span><span title="預計閱讀時間">1 分鐘</span>
+  <span>313 字</span><span class="px-2 text-primary-500">&middot;</span><span title="預計閱讀時間">1 分鐘</span>
   
 
   
@@ -534,7 +534,75 @@
   
   <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
     
-    
+     <div
+      class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-10">
+
+         <details open id="TOCView"
+  class="toc-right mt-0 overflow-y-scroll overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目錄
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#建立網站">建立網站</a></li>
+    <li><a href="#文檔">文檔</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目錄
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#建立網站">建立網站</a></li>
+    <li><a href="#文檔">文檔</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+<script>
+
+  var margin = 200;
+  var marginError = 50;
+
+  (function () {
+    var $window = $(window);
+    var $toc = $('#TOCView');
+    var tocHeight = $toc.height();
+
+    function onResize() {
+      var windowAndMarginHeight = $window.height() - margin;
+      if(tocHeight >= windowAndMarginHeight) {
+        $toc.css("overflow-y", "scroll")
+        $toc.css("max-height", (windowAndMarginHeight + marginError) + "px")
+      } else {
+        $toc.css("overflow-y", "hidden")
+        $toc.css("max-height", "9999999px")
+      }
+    }
+
+    $window.on('resize', onResize);
+    $(document).ready(onResize);
+  })();
+
+
+
+</script>
+   </div>
+      </div>
+      
 
       <div class="min-w-0 min-h-0 max-w-fit">
         
@@ -542,13 +610,56 @@
 
 
         <div class="article-content max-w-prose mb-20">
-          <p><del>其實只是測試貼文，筆記只是順便</del></p>
-<p>說好的網站，弄了很久終於下定決心要弄好了</p>
-<p>原本是想要用Hexo來架，結果不小心就被Hugo燒到ㄌ</p>
-<p>網路上有很多大神的Hugo介紹，或者有<a href="https://blowfish.page/" target="_blank">Blowfish Theme的文件</a>可以參考</p>
-<p>在<strong>local端</strong>運行網頁</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">hugo</span> <span class="nx">server</span>
-</span></span></code></pre></div><p><del>然後&hellip;好像也沒有然後ㄌ</del></p>
+          
+
+<h2 class="relative group">前言 
+    <div id="%E5%89%8D%E8%A8%80" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%89%8D%E8%A8%80" aria-label="定位點">#</a>
+    </span>        
+    
+</h2>
+<p><del>這個貼文原本只是測試貼文而已</del></p>
+<p>一開始只是想說，要用網站來記錄心得，然後看到很多人利用 Hugo or Hexo 來建立網站</p>
+<p>原本是想要用Hexo來架，但自己實作下來對於Hugo的主題比較喜歡</p>
+<p>然後在網路上有很多大神的Hugo介紹，然後有Hugo官方文件可以參考(幾乎都是英文)</p>
+<p>如果想要興建跟我一樣的主題，也可以直接利用Blowfish主題提供的工具來慢慢建立(互動式)</p>
+
+
+<h2 class="relative group">建立網站 
+    <div id="%E5%BB%BA%E7%AB%8B%E7%B6%B2%E7%AB%99" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%BB%BA%E7%AB%8B%E7%B6%B2%E7%AB%99" aria-label="定位點">#</a>
+    </span>        
+    
+</h2>
+<p>我是先利用Hugo建好網站後，再安裝Blowfish主題</p>
+<pre tabindex="0"><code>hugo new site [site-name]
+cd [site-name]
+git init
+git submodule add -b main https://github.com/nunocoracao/blowfish.git themes/blowfish
+</code></pre><p>然後要記得把Hugo原本的config.toml檔案給換成Blowfish Theme提供的config檔案</p>
+<p>這樣去查找Blowfish的文件時才準確</p>
+
+
+<h2 class="relative group">文檔 
+    <div id="%E6%96%87%E6%AA%94" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E6%96%87%E6%AA%94" aria-label="定位點">#</a>
+    </span>        
+    
+</h2>
+<p><a href="https://blowfish.page/docs/" target="_blank">Blowfish文件</a></p>
+<p><a href="https://gohugo.io/documentation/" target="_blank">Hugo文件</a></p>
 
         </div>
         
