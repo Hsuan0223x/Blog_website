@@ -1,22 +1,22 @@
 languageCode = "zh-tw"
 languageName = "Traditional Chinese (Taiwan)"
 weight = 1
-title = "Hsuan0223x's Blog"
+title = ""
 
 [params]
   displayName = "zh-tw"
   isoCode = "zh-tw"
   rtl = false
   dateFormat = "2 January 2006"
-  logo = "sakura_icon.png"
+  # logo = "site_logo.png"
   # secondaryLogo = "hacker_icon1.png"
   # description = "hsuan0223x"
   # copyright = "Copy, _right?_ :thinking_face:"
 
  [author]
-  name = "hsuan0223x"
+   name = "hsuan0223x"
    image = "Person_photo.jpg"
-   headline = "一個路人。"
+   #headline = ""
   # bio = "A little bit about you"
    links = [
      { email = "mailto:hsuan0223x@gmail.com" },
