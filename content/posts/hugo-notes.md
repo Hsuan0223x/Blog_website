@@ -31,8 +31,52 @@ git submodule add -b main https://github.com/nunocoracao/blowfish.git themes/blo
 
 這樣去查找Blowfish的文件時才準確
 
+## 建立Github Action
+當你把你修正好的code，推送到Github上時
+
+可以自動套用變更到Cloudflare Pages上
+
+以下是我用的code
+
+```yaml
+name: Update theme
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+  workflow_dispatch:
+
+jobs:
+  update-theme:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+    
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "latest"
+          extended: true
+
+      - name: Update theme
+        run: git submodule update --remote --merge
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "CI: Update theme"
+```
+### Cloudflare Pages
+詳情請看Cloudflare官方的文檔
 ## 文檔
 
 [Blowfish文件](https://blowfish.page/docs/)
 
 [Hugo文件](https://gohugo.io/documentation/)
+
+[Cloudflare Pages文件](https://developers.cloudflare.com/pages/framework-guides/deploy-a-hugo-site/)

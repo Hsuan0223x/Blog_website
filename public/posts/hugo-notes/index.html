@@ -100,7 +100,7 @@
     "keywords": ["hugo","website","notes"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "313"
+    "wordCount": "468"
   }]
   </script>
 
@@ -180,7 +180,7 @@
             
             
             
-  <a href="/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+  <a href=""  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
     
     <p class="text-base font-medium" title="">
         Home
@@ -358,7 +358,7 @@
 
                     
   <li class="mt-1">
-    <a href="/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    <a href=""  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
         
         <p class="text-bg font-bg" title="">
             Home
@@ -484,7 +484,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <span>313 字</span><span class="px-2 text-primary-500">&middot;</span><span title="預計閱讀時間">1 分鐘</span>
+  <span>468 字</span><span class="px-2 text-primary-500">&middot;</span><span title="預計閱讀時間">1 分鐘</span>
   
 
   
@@ -537,6 +537,11 @@
   <ul>
     <li><a href="#前言">前言</a></li>
     <li><a href="#建立網站">建立網站</a></li>
+    <li><a href="#建立github-action">建立Github Action</a>
+      <ul>
+        <li><a href="#cloudflare-pages">Cloudflare Pages</a></li>
+      </ul>
+    </li>
     <li><a href="#文檔">文檔</a></li>
   </ul>
 </nav>
@@ -553,6 +558,11 @@
   <ul>
     <li><a href="#前言">前言</a></li>
     <li><a href="#建立網站">建立網站</a></li>
+    <li><a href="#建立github-action">建立Github Action</a>
+      <ul>
+        <li><a href="#cloudflare-pages">Cloudflare Pages</a></li>
+      </ul>
+    </li>
     <li><a href="#文檔">文檔</a></li>
   </ul>
 </nav>
@@ -635,6 +645,65 @@ git submodule add -b main https://github.com/nunocoracao/blowfish.git themes/blo
 <p>這樣去查找Blowfish的文件時才準確</p>
 
 
+<h2 class="relative group">建立Github Action 
+    <div id="%E5%BB%BA%E7%AB%8Bgithub-action" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%BB%BA%E7%AB%8Bgithub-action" aria-label="定位點">#</a>
+    </span>        
+    
+</h2>
+<p>當你把你修正好的code，推送到Github上時</p>
+<p>可以自動套用變更到Cloudflare Pages上</p>
+<p>以下是我用的code</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Update theme</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">on</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">schedule</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">cron</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;0 0 * * *&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">workflow_dispatch</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">jobs</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">update-theme</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l">ubuntu-latest</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">permissions</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l">write</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/checkout@v3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Setup Hugo</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">peaceiris/actions-hugo@v2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">hugo-version</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;latest&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">extended</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Update theme</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l">git submodule update --remote --merge</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Commit changes</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">stefanzweifel/git-auto-commit-action@v4</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">commit_message</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;CI: Update theme&#34;</span><span class="w">
+</span></span></span></code></pre></div>
+
+<h3 class="relative group">Cloudflare Pages 
+    <div id="cloudflare-pages" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#cloudflare-pages" aria-label="定位點">#</a>
+    </span>        
+    
+</h3>
+<p>詳情請看Cloudflare官方的文檔</p>
+
+
 <h2 class="relative group">文檔 
     <div id="%E6%96%87%E6%AA%94" class="anchor"></div>
     
@@ -647,6 +716,7 @@ git submodule add -b main https://github.com/nunocoracao/blowfish.git themes/blo
 </h2>
 <p><a href="https://blowfish.page/docs/" target="_blank">Blowfish文件</a></p>
 <p><a href="https://gohugo.io/documentation/" target="_blank">Hugo文件</a></p>
+<p><a href="https://developers.cloudflare.com/pages/framework-guides/deploy-a-hugo-site/" target="_blank">Cloudflare Pages文件</a></p>
 
         </div>
         
