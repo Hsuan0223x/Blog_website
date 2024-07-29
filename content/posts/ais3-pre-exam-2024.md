@@ -310,7 +310,7 @@ AIS3{G0D_D4MN_4N9R_15_5UP3R_P0W3RFU1!!!}
 ```
 ## Crypto
 ### babyRSA
-![image](https://hackmd.io/_uploads/HJMC5Q7NA.png =50%x)
+![image](https://hackmd.io/_uploads/HJMC5Q7NA.png)
 
 先打開來看看程式！
 ```python
